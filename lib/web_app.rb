@@ -16,13 +16,17 @@ get '/testpage' do
   "<h1 testing header h1>"
 end
 
-get '/cat' do
-  "<style contenteditable>
-  .brd { border: 5px dashed red;}
-  </style>
+post '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
+end
 
-  <div>
-  <img class=brd src='http://bit.ly/1eze8aE' style=>
-  </div>
-  "
+get '/cat-form' do
+  erb(:form)
+end
+
+get '/random-cat' do
+  @name = ["Snowball", "Oscar", "Viking"].sample
+  erb(:index)
 end

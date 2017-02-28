@@ -1,0 +1,21 @@
+
+ <%if @name %>
+  <h1> My name is <%=@name%> </h1>
+ <%else%>
+  <form action="/named-cat" method="get">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" name="name">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+<% end %>
+
+
+<style contenteditable>
+.brd { border: 5px dashed red;}
+</style>
+
+<div>
+<img class=brd src='http://bit.ly/1eze8aE' style=>
+</div>
